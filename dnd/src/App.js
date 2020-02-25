@@ -3,16 +3,24 @@ import React from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-background:blue,
-border-radius:3px,
-border:  1px solid red,
-padding: 20px`;
+  background: ${props => (props.primary ? "red" : "green")};
+  border-radius: 3px;
+  border: 1px solid red;
+  padding: 7px 10px;
+  color: #fff;
+  &:hover {
+    color: blue;
+  }
+`;
 
 function App() {
   return (
     <div>
       Render components to test here!!
-      <Button />
+      <div>
+        <button>Create</button>
+        <Button>Create </Button>
+      </div>
     </div>
   );
 }
