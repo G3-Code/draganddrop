@@ -19,6 +19,11 @@ export default function Page1() {
         <button className="displayNone">Demo Buttons</button>
         <div>Display None Ending</div>
       </div>
+      <div>
+        <div>Visibility Hidden Beginning</div>
+        <button className="visibility-hidden">Demo Buttons</button>
+        <div>Visibility Hidden Ending</div>
+      </div>
     </Fragment>
   );
 }
