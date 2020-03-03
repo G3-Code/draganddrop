@@ -27,3 +27,8 @@ export default function Page1() {
     </Fragment>
   );
 }
+/**
+ * document.body.addEventListener('focusin', (event) => {
+ *  console.log(document.activeElement);
+ * })
+ */
