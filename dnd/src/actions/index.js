@@ -4,7 +4,7 @@ export const INCREASE_COUNTER_SUCCESS = "INCREASE_COUNTER_SUCCESS";
 export const INCREASE_COUNTER_ERROR = "INCREASE_COUNTER_ERROR";
 
 export const getIncreasedCounter = count => {
-  return dispatch(() => {
+  return dispatch => {
     try {
       dispatch({
         type: INCREASE_COUNTER_SUCCESS,
@@ -16,5 +16,5 @@ export const getIncreasedCounter = count => {
         payload: error
       });
     }
-  });
+  };
 };
