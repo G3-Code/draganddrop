@@ -1,14 +1,19 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getIncreaseCounter } from "./actions";
+import { getIncreasedCounter } from "./actions";
+import Button from "./component/Button";
 import "./App.css";
 
 function App() {
   const counterVal = useSelector(state => state.counterVal);
+  const dispatch = useDispatch();
+  const onButtonClick = () => {
+    dispatch(getIncreasedCounter(counterVal));
+  };
   return (
-    <div className="App">
-      <div>{counterVal}</div>
-      <button>Add</button>
+    <div className="App" data-test="App">
+      <div data-test="counterVal">{counterVal}</div>
+      <Button onButtonClick={onButtonClick} />
     </div>
   );
 }

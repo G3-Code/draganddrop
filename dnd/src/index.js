@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 import reducer from "./reducers";
 
 const store = createStore(reducer, applyMiddleware(logger, thunk));
+console.log("-----------------" + JSON.stringify(store));
 
 ReactDOM.render(
   <Provider store={store}>
